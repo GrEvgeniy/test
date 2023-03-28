@@ -1,0 +1,17 @@
+version: '3.0'
+services:
+  nginx:
+#    image: mysupervisord
+    image: test_php
+#    command: /bin/bash /root/1.sh
+#    command: /etc/init.d/supervisor start
+#  networks:
+#   - 172.20.0.2
+#    container_name: ansible
+    ports:
+      - 80:80
+#  networks: 
+#    default: 
+#      name: "php_test" 
+#     external: true
+ 
