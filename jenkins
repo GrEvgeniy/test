@@ -1,20 +1,11 @@
 pipeline {
-2
     agent any
-3
-4
+
     stages {
-5
-        stage('Сборка') {
-6
+        stage('Hello') {
             steps {
-7
-                sh 'ssh root@79.141.74.232 \'./helloworld.sh\''
-8
+                echo 'Hello World'
             }
-9
         }
-10
     }
-11
-}    
+}
