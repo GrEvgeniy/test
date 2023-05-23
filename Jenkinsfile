@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Сборка') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \'cd /home/jeka/docker/django && docker-compose down\''
+                sh 'ssh jeka@192.168.88.108 \'cd /home/jeka/docker/django && ps axjf\''
             }
         }
         stage('Тестирование') {
