@@ -16,4 +16,5 @@ pipeline {
                 sh 'ssh jeka@192.168.88.108 \'hostname\''
             }
         }        
-}            
+    }            
+}
