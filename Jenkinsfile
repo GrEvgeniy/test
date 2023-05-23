@@ -1,20 +1,22 @@
-#!groovy
-//Check ub1 properties
-properties([disableConcurrentBuilds()])
 
 pipeline {
-    agent {
-        label 'master'
-        }
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-        timestamps()
-    }         
+    agent any
+
     stages {
-        stage("Preparations") {
+        stage('Сборка') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \'hostname\''
+                sh 'ssh jeka@192.168.88.108 \'cd /home/jeka/docker/django && docker-compose up -d\''
             }
-        }        
-    }        
-} 
+        }
+        stage('Тестирование') {
+            steps {
+                sh 'ssh jeka@192.168.88.108 \'docker ps\''
+            }
+        }
+        stage('Развертывание') {
+            steps {
+                sh 'ssh jeka@192.168.88.108 \' pwd \''
+            }
+        }
+    }
+}
