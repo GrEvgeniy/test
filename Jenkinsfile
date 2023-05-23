@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Развертывание') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \' uptime \''
+                sh 'ssh jeka@192.168.88.108 \' pwd\''
             }
         }
     }
