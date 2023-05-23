@@ -4,7 +4,7 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
     agent {
-        label 'main'
+        label 'master'
         }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage("Preparations") {
             steps {
-                sh 'ssh root@94.26.236.8 \'hostname\''
+                sh 'ssh jeka@192.168.88.108 \'hostname\''
             }
         }        
     }        
