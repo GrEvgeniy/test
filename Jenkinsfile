@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Сборка') {
             steps {
-                sh 'ssh root@172.27.0.2 \'pwd\''
+                sh 'sshpass -p "1" ssh root@172.27.0.2 \'pwd\''
             }
         }
         stage('Тестирование') {
