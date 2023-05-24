@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Сборка') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \'cd /home/jeka/test && \'[for ((i = 1; i <= 5; i++)); do echo "number: $i"; done]\''
+                sh 'ssh jeka@192.168.88.108 \'cd /home/jeka/docker/django && \'docker-compose up -d\''
             }
         }
         stage('Тестирование') {
