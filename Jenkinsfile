@@ -1,7 +1,7 @@
 
 pipeline {
     agent any
-    triggers { pollSCM('* * * * *') }
+    triggers { upstream(upstreamProjects: 'job1,job2', threshold: hudson.model.Result.SUCCESS) }
     stages {
         stage('Сборка') {
             steps {
