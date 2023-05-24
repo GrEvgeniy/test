@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Тестирование') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \'docker inspect django_django\''
+                sh 'ssh jeka@192.168.88.108 \'docker inspect postgres:13.3\''
             }
         }
         stage('Развертывание') {
