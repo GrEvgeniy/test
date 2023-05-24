@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Тестирование') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \'docker inspect postgres:13.3\''
+                sh 'ssh jeka@192.168.88.108 \'ssh root@172.27.02 -p22222 && pwd\''
             }
         }
         stage('Развертывание') {
