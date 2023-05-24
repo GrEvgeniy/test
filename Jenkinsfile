@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Тестирование') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \' sshpass -p "1" ssh root@172.27.02 -p22222 && pwd\''
+                sh 'ssh jeka@192.168.88.108 \' sshpass -p "1" ssh root@172.27.02 -p22222 && ps axjf\''
             }
         }
         stage('Развертывание') {
