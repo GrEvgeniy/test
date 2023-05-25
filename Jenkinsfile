@@ -5,12 +5,12 @@ pipeline {
     stages {
         stage('Сборка') {
             steps {
-                sh ' ssh ubuntu@10.0.3.36 \' pwd\''
+                sh ' ssh ubuntu@10.0.3.36 \' cd cook_blog && python3 manage.py runserver\''
             }
         }
         stage('Тестирование') {
             steps {
-                sh ' ssh ubuntu@10.0.3.36 \' ps axjf\''
+                sh ' ssh ubuntu@10.0.3.36 \' lsof -i -n -P\''
             }
         }
         stage('Развертывание') {
