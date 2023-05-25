@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Сборка') {
             steps {
-                sh ' ssh ubuntu@10.0.3.36 \'  python3 /home/ubuntu/cook_blog/manage.py runserver\''
+                sh ' ssh ubuntu@10.0.3.36 \' python3 /home/ubuntu/cook_blog/manage.py runserver 10.0.3.36:8000 \''
             }
         }
         stage('Тестирование') {
