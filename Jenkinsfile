@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Сборка') {
             steps {
-                sh ' ssh ubuntu@10.0.3.36 \' pwd\''ssh ubuntu@10.0.3.36
+                sh ' ssh ubuntu@10.0.3.36 \' pwd\''
             }
         }
         stage('Тестирование') {
