@@ -5,17 +5,17 @@ pipeline {
     stages {
         stage('Сборка') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \'pwd\''
+                sh ' ssh ubuntu@10.0.3.36 \' pwd\''ssh ubuntu@10.0.3.36
             }
         }
         stage('Тестирование') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \' ps axjf\''
+                sh ' ssh ubuntu@10.0.3.36 \' ps axjf\''
             }
         }
         stage('Развертывание') {
             steps {
-                sh 'ssh jeka@192.168.88.108 \' ip -o a\''
+                sh 'ssh  \ssh ubuntu@10.0.3.36 \' ip -o a\''
             }
         }
     }
