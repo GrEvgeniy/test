@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Тестирование') {
             steps {
-                sh ' ssh ubuntu@10.0.3.36 \' lsof -i -n -P\''
+                sh ' ssh ubuntu@10.0.3.36 \' pwd\''
             }
         }
         stage('Развертывание') {
